@@ -15,11 +15,11 @@ const char* ssid     = "";
 const char* password = "";
 
 // Añada su dominio o dirección IP con path.
-// http://192.168.1.35/web-esp/post-esp-data.php
-// http://ejemplo.es/post-esp-data.php
+// http://192.168.1.35/web-esp/api.php
+// http://ejemplo.es/api.php
 const char* serverName = "";
 
-// Si cambia el valor de apiKeyValue, el archivo PHP /post-esp-data.php también debe tener la misma clave
+// Si cambia el valor de apiKeyValue, el archivo PHP /api.php también debe tener la misma clave
 const String apiKeyValue = "mNpsDHYQjaDmTzknzPc";
 
 // Sensor YL-69 
