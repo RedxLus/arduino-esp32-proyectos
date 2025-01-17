@@ -75,8 +75,9 @@ void loop() {
   display.setCursor(0, 0);
   display.println(F("Auto riego"));
 
-  display.setCursor(0, 40);
+  display.setCursor(0, 20);
   display.print(F("Humedad: "));
+  display.setCursor(0, 40);
   display.print(porcentajeHumedad);
   display.println(F(" %"));
 
