@@ -73,10 +73,10 @@ void loop() {
   display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(0, 0);
-  display.println(F("Hehe <3"));
+  display.println(F("Auto riego"));
 
   display.setCursor(0, 40);
-  display.print(F("Soil: "));
+  display.print(F("Humedad: "));
   display.print(porcentajeHumedad);
   display.println(F(" %"));
 
