@@ -14,7 +14,7 @@ ThreeWire myWire(14,13,12); // DAT, SCLK, RST
 RtcDS1302<ThreeWire> Rtc(myWire);
 
 // Configuración de la pump
-#define pump1 D7      // Pin digital para controlar la bomba de agua
+#define pump1 7      // Pin digital para controlar la bomba de agua
 
 void setup() {
   Wire.begin(SDA, SCL);           
@@ -98,6 +98,13 @@ void loop() {
         lcd.print(now.Minute());
         lcd.print(":");
         lcd.print(now.Second());
+    }
+
+    // Activar y desactivar la bomba cada minuto
+    if (now.Minute() % 2 == 0) {
+        digitalWrite(pump1, LOW); // Activa la bomba
+    } else {
+        digitalWrite(pump1, HIGH); // Desactiva la bomba
     }
 
     delay(1000);
