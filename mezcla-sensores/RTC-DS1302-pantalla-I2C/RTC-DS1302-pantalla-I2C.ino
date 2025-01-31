@@ -2,15 +2,15 @@
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h>
 
-#define SDA 14                    // Definir pines SDA
-#define SCL 13                    // Definir pines SCL
+#define SDA 5                    // Definir pines SDA
+#define SCL 4                    // Definir pines SCL
 LiquidCrystal_I2C lcd(0x27,16,2);
 
 // Descargar librería: "Rtc by Makuna"
 #include <ThreeWire.h>  
 #include <RtcDS1302.h>
 
-ThreeWire myWire(3,4,2); // DAT, SCLK, RST
+ThreeWire myWire(14,13,12); // DAT, SCLK, RST
 RtcDS1302<ThreeWire> Rtc(myWire);
 
 void setup() {
